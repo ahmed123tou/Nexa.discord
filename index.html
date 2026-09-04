@@ -3,91 +3,118 @@
 <head>
     <title>Nexa - Discord - Test</title>
 
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔵</text></svg>">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔵</text></svg>">
+
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            font-family: Arial, sans-serif;
+        }
+
+
+        /* =========================
+           WELCOME TEXT
+           ========================= */
+
+        h1 {
+            --x: 0px;
+            --y: -80px;
+
+            transform: translate(var(--x), var(--y));
+
+            margin: 0;
+
+            font-size: 32px;
+            font-weight: 600;
+            color: #5da9ff;
+            letter-spacing: 3px;
+
+            text-shadow:
+                0 0 5px #5da9ff,
+                0 0 15px #5da9ff;
+
+            transition: 0.3s;
+        }
+
+        h1:hover {
+            color: white;
+
+            text-shadow:
+                0 0 5px #5da9ff,
+                0 0 20px #5da9ff,
+                0 0 35px #5da9ff;
+        }
+
+
+        /* =========================
+           SIGNUP BUTTON
+           ========================= */
+
+        button {
+            --x: 0px;
+            --y: 20px;
+
+            transform: translate(var(--x), var(--y));
+
+            width: 150px;
+            height: 50px;
+
+            --glow-color: rgb(100, 180, 255);
+            --btn-color: rgb(35, 90, 160);
+
+            border: 2px solid var(--glow-color);
+
+            color: var(--glow-color);
+            font-size: 15px;
+            font-weight: bold;
+
+            cursor: pointer;
+
+            background-color: var(--btn-color);
+            border-radius: 12px;
+            outline: none;
+
+            box-shadow:
+                0 0 8px 2px var(--glow-color),
+                inset 0 0 6px 2px var(--glow-color);
+
+            text-shadow:
+                0 0 4px var(--glow-color);
+
+            transition: 0.3s;
+        }
+
+        button:hover {
+            color: var(--btn-color);
+            background-color: var(--glow-color);
+
+            box-shadow:
+                0 0 14px 3px var(--glow-color),
+                inset 0 0 8px 2px var(--glow-color);
+        }
+
+        button:active {
+            transform: translate(var(--x), var(--y)) scale(0.96);
+
+            box-shadow:
+                0 0 6px 2px var(--glow-color),
+                inset 0 0 6px 2px var(--glow-color);
+        }
+    </style>
 </head>
 
 <body>
 
-<h1>Hello and welcome to example website</h1>
+    <h1>Hello and welcome to example website</h1>
 
-<style>
-h1 {
-    --x: 895px;
-    --y: 100px;
-
-    transform: translate(var(--x), var(--y));
-
-        
-        font-family: Arial, sans-serif;
-        font-size: 30px;
-        font-weight: 600;
-        color: #5da9ff;
-        letter-spacing: 3px;
-
-        text-shadow:
-            0 0 5px #5da9ff,
-            0 0 15px #5da9ff;
-
-        transition: 0.3s;
-    }
-
-    h1:hover {
-        color: white;
-
-        text-shadow:
-            0 0 5px #5da9ff,
-            0 0 20px #5da9ff,
-            0 0 35px #5da9ff;
-    }
-</style>
-
-<button>signup</button>
-
-<style>
-    button {
-                position: relative;
-         top: 300px;
-        left: 350px;
-        
-        --glow-color: rgb(100, 180, 255);
-        --glow-spread-color: rgba(0, 120, 255, 0.35);
-        --btn-color: rgb(35, 90, 160);
-
-        border: 0.15em solid var(--glow-color);
-        padding: 1em 3em;
-        color: var(--glow-color);
-        font-size: 15px;
-        font-weight: bold;
-        cursor: pointer;
-        background-color: var(--btn-color);
-        border-radius: 1em;
-        outline: none;
-
-        box-shadow:
-            0 0 0.4em 0.1em var(--glow-color),
-            inset 0 0 0.3em 0.1em var(--glow-color);
-
-        text-shadow: 0 0 0.2em var(--glow-color);
-
-        position: relative;
-        transition: all 0.3s;
-    }
-
-    button:hover {
-        color: var(--btn-color);
-        background-color: var(--glow-color);
-
-        box-shadow:
-            0 0 0.7em 0.15em var(--glow-color),
-            inset 0 0 0.4em 0.1em var(--glow-color);
-    }
-
-    button:active {
-        box-shadow:
-            0 0 0.3em 0.1em var(--glow-color),
-            inset 0 0 0.3em 0.1em var(--glow-color);
-    }
-</style>
+    <button>signup</button>
 
 </body>
 </html>
